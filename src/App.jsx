@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import Navbar from "./Components/Navbar";
-import Home from "./components/Home";
-import Menu from "./components/Menu";
-import Cart from "./components/Cart";
-import Order from "./components/Order";
-import OrderSuccess from "./components/OrderSuccess";
-import Chatbot from "./components/Chatbot";
+import Home from "./Components/Home";
+import Menu from "./Components/Menu";
+import Cart from "./Components/Cart";
+import Order from "./Components/Order";
+import OrderSuccess from "./Components/OrderSuccess";
+import Chatbot from "./Components/Chatbot";
 import "./App.css";
 
 function App() {

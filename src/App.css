@@ -1,0 +1,150 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #fff8f0;
+}
+
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer {
+  background: #d90429;
+  color: #fff;
+  text-align: center;
+  padding: 16px 0;
+  margin-top: auto;
+  font-size: 1rem;
+}
+
+.fade-in {
+  animation: fadeIn 1s;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+
+.button {
+  background: #d90429;
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+
+.button:hover {
+  background: #ef233c;
+}
+
+.card {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  padding: 24px;
+  margin: 16px;
+  transition: transform 0.2s;
+  width: 25rem;
+}
+
+.card:hover {
+  transform: scale(1.04);
+}
+
+.navbar {
+  background: #d90429;
+  color: #fff;
+  padding: 18px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.2rem;
+}
+
+.navbar-links button {
+  background: none;
+  border: none;
+  color: #fff;
+  margin: 0 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.navbar-links button:hover {
+  color: #ffd166;
+}
+
+.chatbot-container {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 1000;
+}
+
+.chatbot-card {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.14);
+  width: 320px;
+  max-height: 400px;
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+}
+
+.chatbot-header {
+  background: #d90429;
+  color: #fff;
+  padding: 10px;
+  border-radius: 12px 12px 0 0;
+  text-align: center;
+  font-weight: bold;
+}
+
+.chatbot-messages {
+  flex: 1;
+  padding: 10px;
+  overflow-y: auto;
+}
+
+.chatbot-input {
+  display: flex;
+  gap: 8px;
+  padding: 10px 0;
+}
+
+.chatbot-input input {
+  flex: 1;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #eee;
+}
+
+.chatbot-input button {
+  background: #d90429;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+@media (max-width: 700px) {
+  .chatbot-container {
+    right: 8px;
+    bottom: 8px;
+    width: 90vw;
+  }
+  .chatbot-card {
+    width: 100%;
+    min-width: 250px;
+  }
+}

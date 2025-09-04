@@ -6,6 +6,7 @@ import Cart from "./Components/Cart";
 import Order from "./Components/Order";
 import OrderSuccess from "./Components/OrderSuccess";
 import Chatbot from "./Components/Chatbot";
+
 import "./App.css";
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
     <div className="app-container">
       <Navbar setPage={setPage} cartCount={cart.length} />
       <Chatbot />
+      
       {page === "home" && <Home setPage={setPage} />}
       {page === "menu" && <Menu cart={cart} setCart={setCart} />}
       {page === "cart" && (

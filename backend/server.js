@@ -1,13 +1,13 @@
 // Basic Express backend for FiveStar Fried Chicken orders
 
-const express = require('express');
-const cors = require('cors');
+import express, { json } from 'express';
+import cors from 'cors';
 const app = express();
 const PORT = 4000;
 
 // Use CORS to allow frontend requests
 app.use(cors());
-app.use(express.json());
+app.use(json());
 
 // Mock menu data (in real use, you'd use a database)
 const menu = [
@@ -16,70 +16,70 @@ const menu = [
     name: "Classic Fried Chicken Bucket",
     description: "Juicy, crispy fried chicken pieces served in a family bucket.",
     price: 499,
-    image: "https://images.pexels.com/photos/33037756/pexels-photo-33037756.jpeg"
+    image: "../assets/image2.jpg"
   },
   {
     id: 2,
     name: "Spicy Chicken Wings",
     description: "Hot and spicy wings tossed in our secret sauce.",
     price: 299,
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJAy2jWJ9530jebV_V375erA3x5nQ289t1sg&s"
+    image: "../assets/image3.jpg"
   },
   {
     id: 3,
     name: "Chicken Popcorn",
     description: "Bite-sized crispy chicken popcorn. Perfect snack for all ages.",
     price: 199,
-    image: "https://images.unsplash.com/photo-1464306076886-debede12a15b?auto=format&fit=crop&w=600&q=80"
+    image: "../assets/image4.jpg"
   },
   {
     id: 4,
     name: "Chicken Burger",
     description: "Tender chicken patty, fresh veggies, and our special sauce.",
     price: 149,
-    image: "https://content.jdmagicbox.com/comp/def_content_category/five-star-chicken-11979519-3sgz0i0p7h-250.jpg"
+    image: "../assets/image5.jpg"
   },
   {
     id: 5,
     name: "Veg Nuggets",
     description: "Crispy vegetarian nuggets made with veggies and spices.",
     price: 99,
-    image: "https://5.imimg.com/data5/SELLER/Default/2025/3/494360458/CY/VP/EY/41057084/frozen-veg-nuggets.jpg"
+    image: "../assets/image6.jpg"
   },
   {
     id: 6,
     name: "French Fries",
     description: "Golden, crispy French fries served with dip.",
     price: 89,
-    image: "https://www.recipetineats.com/tachyon/2022/09/Crispy-Fries_8.jpg"
+    image: "../assets/image7.jpg"
   },
   {
     id: 7,
     name: "Cheese Balls",
     description: "Cheesy, crunchy balls - perfect for sharing.",
     price: 129,
-    image: "https://5.imimg.com/data5/SELLER/Default/2025/3/494360458/CY/VP/EY/41057084/frozen-veg-nuggets.jpg"
+    image: "../assets/image8.jpg"
   },
   {
     id: 8,
     name: "Chicken Nuggets",
     description: "Classic chicken nuggets with a golden crunch.",
     price: 159,
-    image: "https://5.imimg.com/data5/SELLER/Default/2025/3/494360458/CY/VP/EY/41057084/frozen-veg-nuggets.jpg"
+    image: "../assets/image9.jpg"
   },
   {
     id: 9,
     name: "Chicken Wrap",
     description: "Soft tortilla wrap filled with spicy chicken, veggies, and sauce.",
     price: 179,
-    image: "https://www.momables.com/wp-content/uploads/2024/03/Crispy-chicken-wrap_SQ.jpg"
+    image: "../assets/image10.jpg"
   },
   {
     id: 10,
     name: "Soft Drink",
     description: "Choice of Coke, Sprite, or Fanta.",
     price: 49,
-    image: "https://www.bbassets.com/media/uploads/p/l/40094179_9-pepsi-soft-drink.jpg"
+    image: "../assets/image11.jpg"
   }
 ];
 
